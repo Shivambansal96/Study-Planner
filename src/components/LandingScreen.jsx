@@ -43,11 +43,11 @@ function LandingScreen() {
 
         console.log(value);
 
-        if(e.target.innerText == '+') {
+        if(e.target.value == '+') {
             tempData[index].hours = value + 1;
         }
 
-        if(e.target.innerText == '-') {
+        if(e.target.value == '-') {
             if(value > 0) 
             tempData[index].hours = value - 1;
         }
@@ -102,11 +102,11 @@ function LandingScreen() {
                             </div>
 
                             <div className="h-10 w-10 border-2 flex justify-center items-center hover:cursor-pointer bg-green-700 rounded-md" > 
-                                <p>+</p>
+                                <input type="button" value="+" />
                             </div>
 
                             <div className="h-10 w-10 border-2 flex justify-center items-center bg-red-600 rounded-md">
-                                <p>-</p>
+                                <input type="button" value="-" />
                             </div>
                         </div>
                     );
